@@ -1,0 +1,13 @@
+| Storage Type     | Persistent?              | Scope             | Accessible by     |
+|------------------|------------------------- |------------------ |--------------------|
+| `localStorage`   | Yes                      | Same-origin       | JS only            |
+| `sessionStorage` | No (clears on tab close) | Same tab & origin | JS only |
+| `cookie`         | Yes (configurable)       | Same-origin or domain-wide (via `path`) | JS and server (HTTP headers) |
+
+
+
+Page not served over HTTP(S):
+
+Cookies behave differently if you're just opening the HTML file using file://... (double-clicking to open in browser).instead run-
+
+✅ Solution: Run the page with a local server (e.g., VS Code Live Server(extension in vs code), python -m http.server, or npx serve).
